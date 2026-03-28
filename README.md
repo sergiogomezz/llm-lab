@@ -1,8 +1,7 @@
 # llm-lab
 
 Personal lab for understanding LLMs from the ground up — architecture, 
-pretraining, and fine-tuning. Mostly following Karpathy's and Raschka's work, 
-but with my own experiments and notes along the way.
+pretraining, fine-tuning and inference.
 
 ## Structure
 
