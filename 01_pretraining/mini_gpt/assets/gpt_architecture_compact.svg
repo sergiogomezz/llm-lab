@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="650" viewBox="0 0 1500 650" role="img" aria-labelledby="title desc">
+  <title id="title">Compact GPT-2-like architecture</title>
+  <desc id="desc">Token and positional embeddings feed twelve sequential Transformer blocks, followed by final layer normalization and a linear output layer.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#263238"/>
+    </marker>
+    <style>
+      .box { fill: #fff; stroke: #263238; stroke-width: 2; rx: 12; }
+      .soft { fill: #eef3f6; }
+      .attention { fill: #536471; stroke: #263238; stroke-width: 2; rx: 12; }
+      .block { fill: #a9c7d8; stroke: #263238; stroke-width: 2.5; rx: 28; }
+      .arrow { fill: none; stroke: #263238; stroke-width: 2.2; marker-end: url(#arrow); }
+      .shortcut { fill: none; stroke: #425761; stroke-width: 2; stroke-dasharray: 7 5; marker-end: url(#arrow); }
+      text { font-family: Inter, Arial, sans-serif; fill: #172126; font-size: 19px; text-anchor: middle; dominant-baseline: middle; }
+      .small { font-size: 16px; fill: #425761; }
+      .label { font-size: 22px; font-weight: 700; }
+      .white { fill: #fff; font-weight: 650; }
+      .plus { fill: #fff; stroke: #263238; stroke-width: 2; }
+    </style>
+  </defs>
+
+  <rect x="15" y="15" width="1470" height="620" rx="34" fill="#f4f2f1" stroke="#263238" stroke-width="2.5"/>
+  <text x="85" y="52" class="label">GPT model</text>
+
+  <rect x="35" y="205" width="130" height="58" class="box"/>
+  <text x="100" y="234">Token IDs</text>
+
+  <rect x="205" y="190" width="190" height="58" class="box"/>
+  <text x="300" y="219">Token embedding</text>
+  <path d="M165 234 H205" class="arrow"/>
+
+  <rect x="35" y="360" width="130" height="58" class="box soft"/>
+  <text x="100" y="389">Positions</text>
+  <rect x="205" y="345" width="190" height="58" class="box"/>
+  <text x="300" y="374">Position embedding</text>
+  <path d="M165 389 H205" class="arrow"/>
+
+  <circle cx="445" cy="295" r="22" class="plus"/>
+  <text x="445" y="296" font-size="30">+</text>
+  <path d="M395 219 H420 V279 H424" class="arrow"/>
+  <path d="M395 374 H420 V311 H424" class="arrow"/>
+
+  <rect x="485" y="266" width="105" height="58" class="box"/>
+  <text x="537" y="295">Dropout</text>
+  <path d="M467 295 H485" class="arrow"/>
+
+  <rect x="620" y="70" width="585" height="510" class="block"/>
+  <text x="912" y="103" class="label">Transformer block × 12</text>
+
+  <rect x="655" y="155" width="125" height="56" class="box"/>
+  <text x="717" y="183">LayerNorm 1</text>
+  <rect x="815" y="145" width="170" height="76" class="attention"/>
+  <text x="900" y="174" class="white">Masked multi-head</text>
+  <text x="900" y="199" class="white">attention</text>
+  <rect x="1020" y="155" width="105" height="56" class="box"/>
+  <text x="1072" y="183">Dropout</text>
+  <circle cx="1160" cy="183" r="22" class="plus"/>
+  <text x="1160" y="184" font-size="30">+</text>
+
+  <path d="M590 295 H630 V183 H655" class="arrow"/>
+  <path d="M780 183 H815" class="arrow"/>
+  <path d="M985 183 H1020" class="arrow"/>
+  <path d="M1125 183 H1138" class="arrow"/>
+  <path d="M630 183 V125 H1160 V161" class="shortcut"/>
+  <text x="895" y="130" class="small">residual connection</text>
+
+  <rect x="655" y="385" width="125" height="56" class="box"/>
+  <text x="717" y="413">LayerNorm 2</text>
+  <rect x="815" y="385" width="170" height="56" class="box soft"/>
+  <text x="900" y="413">Feed-forward</text>
+  <rect x="1020" y="385" width="105" height="56" class="box"/>
+  <text x="1072" y="413">Dropout</text>
+  <circle cx="1160" cy="413" r="22" class="plus"/>
+  <text x="1160" y="414" font-size="30">+</text>
+
+  <path d="M1160 205 V300 H630 V413 H655" class="arrow"/>
+  <path d="M780 413 H815" class="arrow"/>
+  <path d="M985 413 H1020" class="arrow"/>
+  <path d="M1125 413 H1138" class="arrow"/>
+  <path d="M630 413 V505 H1160 V435" class="shortcut"/>
+  <text x="895" y="500" class="small">residual connection</text>
+
+  <rect x="1240" y="260" width="115" height="70" class="box"/>
+  <text x="1297" y="287">Final</text>
+  <text x="1297" y="311">LayerNorm</text>
+  <rect x="1380" y="250" width="90" height="90" class="box"/>
+  <text x="1425" y="278">Linear</text>
+  <text x="1425" y="302">output</text>
+  <text x="1425" y="326" class="small">logits</text>
+
+  <path d="M1182 413 H1218 V295 H1240" class="arrow"/>
+  <path d="M1355 295 H1380" class="arrow"/>
+
+  <text x="300" y="465" class="small">identity + position</text>
+  <text x="912" y="550" class="small">Each block has independent parameters; blocks run sequentially.</text>
+</svg>
