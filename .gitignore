@@ -211,3 +211,6 @@ __marimo__/
 data/
 experiments/.DS_Store
 .DS_Store
+
+# Model checkpoints
+checkpoints/
