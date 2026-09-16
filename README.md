@@ -3,24 +3,32 @@
 Personal lab for learning how large language models work from the ground up.
 The repository will grow gradually as each topic is studied and implemented.
 
-## Current focus: pretraining
+## Current focus: open-weight models
 
-The first project is a small GPT-like language model built from scratch with
-PyTorch. Concepts are explored in notebooks first and moved to Python modules
-once the implementation is understood and reusable.
+The first project covers building and training a small GPT-like language model
+from scratch with PyTorch. The next chapter explores the Hub, checkpoints, local
+inference and base versus post-trained behavior with Qwen3.
+Start with the [Qwen3 chapter](02_open_weight_models/qwen3/README.md).
+Concepts are explored in notebooks first and moved to Python modules once the
+implementation is understood and reusable.
 
 ```text
-pretraining/
+01_pretraining/
 └── mini_gpt/
     ├── notebooks/  # One learning topic per notebook
     └── src/        # Consolidated, reusable implementations
 
-experiments/        # Independent PyTorch and LLM explorations
+02_open_weight_models/
+└── qwen3/
+    ├── README.md   # Chapter plan and roadmap coverage
+    └── notebooks/  # Hub, forward pass, generation and model comparison
+
+00_experiments/     # Independent PyTorch and LLM explorations
 data/               # Local datasets used by the projects
 ```
 
-Future areas such as open-weight models, fine-tuning and inference will be
-added when they become part of the active learning path.
+Fine-tuning and deeper inference topics will be added when they become part of
+the active learning path.
 
 ## Workflow
 

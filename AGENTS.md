@@ -67,9 +67,12 @@ introduce later topics only when they are relevant.
 
 ## Current focus
 
-The current focus is foundations and pretraining: building and training a small
-GPT-style model from scratch with PyTorch. Preserve that focus unless the user
-explicitly asks to move to another part of the roadmap.
+The current focus is open-weight models: exploring Hugging Face Hub, checkpoints,
+configurations, tokenizers and local inference with Qwen3, then comparing base
+and post-trained behavior. Connect these experiments to the completed mini GPT
+pretraining project. Preserve this focus unless the user explicitly asks to move
+to another part of the roadmap. Notebook scaffolds are plans, not completed
+experiments; implement them incrementally as the user progresses.
 
 ## How to collaborate in this repository
 
