@@ -12,6 +12,20 @@ Start with the [Qwen3 chapter](02_open_weight_models/qwen3/README.md).
 Concepts are explored in notebooks first and moved to Python modules once the
 implementation is understood and reusable.
 
+## Learning roadmap
+
+The folders below map out the full learning path. Future stages contain topic
+checklists; add experiments incrementally as each stage becomes the focus.
+
+| Stage | Focus | Status |
+| --- | --- | --- |
+| [01: Pretraining](01_pretraining/README.md) | Build and train a GPT from scratch; PyTorch foundations | Core learning unit completed |
+| [02: Open-weight models](02_open_weight_models/README.md) | Hub, checkpoints, tokenizers, local inference and model comparisons | Current focus; Qwen3 scaffolds ready |
+| [03: Fine-tuning](03_fine_tuning/README.md) | Full fine-tuning, LoRA, QLoRA and instruction tuning | Planned |
+| [04: Inference and deployment](04_inference_and_deployment/README.md) | KV caching, quantization, serving and performance | Planned |
+| [05: LLM internals and optimization](05_llm_internals_and_optimization/README.md) | Modern components, attention, decoding and scheduling | Planned |
+| [06: Alignment and evaluation](06_alignment_and_evaluation/README.md) | RLHF, preference optimization, evaluation and safety | Planned |
+
 ```text
 01_pretraining/
 └── mini_gpt/
@@ -23,12 +37,19 @@ implementation is understood and reusable.
     ├── README.md   # Chapter plan and roadmap coverage
     └── notebooks/  # Hub, forward pass, generation and model comparison
 
+03_fine_tuning/
+04_inference_and_deployment/
+05_llm_internals_and_optimization/
+06_alignment_and_evaluation/
+
 00_experiments/     # Independent PyTorch and LLM explorations
 data/               # Local datasets used by the projects
 ```
 
-Fine-tuning and deeper inference topics will be added when they become part of
-the active learning path.
+Each stage has a README describing its scope. Check off a topic only after its
+implementation or experiment has been verified and its conclusions recorded.
+The numbering follows the learning order, with open-weight models as a separate
+stage between foundations and fine-tuning.
 
 ## Workflow
 
