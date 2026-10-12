@@ -28,7 +28,7 @@ tolerance, and the restored AdamW state retained all 90 updates.
 
 - [Notebooks](mini_gpt/notebooks/): data preparation, attention, architecture and pretraining.
 - [Reusable code](mini_gpt/src/mini_gpt/): model, data, generation and training helpers.
-- [Next chapter: open-weight models](../02_open_weight_models/qwen3/README.md).
+- [Next chapter: open-weight models](../02_open_weight_models/qwen3/notebooks/01_hub_and_checkpoint.ipynb).
 
 Temperature/top-k sampling will be explored in the next chapter. Loading the
 book's pretrained GPT-2 weights and its fine-tuning chapters remain deferred.
