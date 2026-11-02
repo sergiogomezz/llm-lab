@@ -3,12 +3,14 @@
 Personal lab for learning how large language models work from the ground up.
 The repository will grow gradually as each topic is studied and implemented.
 
-## Current focus: open-weight models
+## Current focus: fine-tuning for tool usage (next experiment)
 
 The first project covers building and training a small GPT-like language model
-from scratch with PyTorch. The next chapter explores the Hub, checkpoints, local
-inference and base versus post-trained behavior with Qwen3.
-Start with the [Qwen3 chapter](02_open_weight_models/qwen3/notebooks/01_hub_and_checkpoint.ipynb).
+from scratch with PyTorch. The Qwen3 chapter now completes the Hub, checkpoints, local
+inference and base versus post-trained comparison learning unit.
+See the [chapter conclusions](02_open_weight_models/README.md) for results and limitations.
+The next agreed experiment is adapting a model for tool usage.
+Resume from the [fine-tuning handoff](03_fine_tuning/README.md#resume-here-fine-tuning-for-tool-usage); implementation has not started.
 Concepts are explored in notebooks first and moved to Python modules once the
 implementation is understood and reusable.
 
@@ -20,8 +22,8 @@ checklists; add experiments incrementally as each stage becomes the focus.
 | Stage | Focus | Status |
 | --- | --- | --- |
 | [01: Pretraining](01_pretraining/README.md) | Build and train a GPT from scratch; PyTorch foundations | Core learning unit completed |
-| [02: Open-weight models](02_open_weight_models/) | Hub, checkpoints, tokenizers, local inference and model comparisons | Current focus; Qwen3 checkpoint inspection completed |
-| [03: Fine-tuning](03_fine_tuning/README.md) | Full fine-tuning, LoRA, QLoRA and instruction tuning | Planned |
+| [02: Open-weight models](02_open_weight_models/) | Hub, checkpoints, tokenizers, local inference and model comparisons | Qwen3 learning unit completed; conclusions recorded |
+| [03: Fine-tuning](03_fine_tuning/README.md) | Full fine-tuning, LoRA, QLoRA and instruction tuning | Next: tool-usage adaptation; not started |
 | [04: Inference and deployment](04_inference_and_deployment/README.md) | KV caching, quantization, serving and performance | Planned |
 | [05: LLM internals and optimization](05_llm_internals_and_optimization/README.md) | Modern components, attention, decoding and scheduling | Planned |
 | [06: Alignment and evaluation](06_alignment_and_evaluation/README.md) | RLHF, preference optimization, evaluation and safety | Planned |

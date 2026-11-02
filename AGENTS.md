@@ -67,12 +67,21 @@ introduce later topics only when they are relevant.
 
 ## Current focus
 
-The current focus is open-weight models: exploring Hugging Face Hub, checkpoints,
-configurations, tokenizers and local inference with Qwen3, then comparing base
-and post-trained behavior. Connect these experiments to the completed mini GPT
-pretraining project. Preserve this focus unless the user explicitly asks to move
-to another part of the roadmap. Notebook scaffolds are plans, not completed
-experiments; implement them incrementally as the user progresses.
+The mini GPT pretraining unit and the focused Qwen3 open-weight models chapter
+are complete. The Qwen3 closure and results are recorded in
+`02_open_weight_models/README.md` and its executed notebooks.
+
+The next agreed focus is fine-tuning for tool usage: adapt an existing model to
+select an appropriate tool and generate a structured call with correct arguments,
+or answer without a tool when appropriate. This is the user's chosen adaptation
+experiment, not a generic fine-tuning demo. It has not been started yet.
+
+On resumption, begin with the handoff in `03_fine_tuning/README.md`. Agree on a
+small task and tool schema, establish the unadapted model's baseline, then compare
+it with the adapted model on held-out examples. Model, dataset and training method
+remain undecided; choose them with the user and the available hardware in mind.
+Preserve the learning-first workflow and implement incrementally. Do not assume
+that planned notebooks or experiments have already been completed.
 
 ## How to collaborate in this repository
 
